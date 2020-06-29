@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.ifmo.cs.pb.lab8.gui.controller.LoginController">
+   <ImageView fitHeight="398.0" fitWidth="598.0" pickOnBounds="true" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+      <Image url="@../image/loginBack.jpg" />
+   </ImageView>
+   <VBox layoutX="64.0" layoutY="75.0" maxHeight="250.0" maxWidth="300.0" minHeight="250.0" minWidth="300.0" prefHeight="250.0" prefWidth="300.0" style="-fx-background-color: lightgrey;">
+      <Label fx:id="loginLabel" alignment="CENTER" prefHeight="36.0" prefWidth="240.0" text="Login">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="10.0" left="30.0" right="30.0" top="30.0" />
+         </VBox.margin>
+      </Label>
+      <TextField fx:id="textField" maxHeight="28.0" maxWidth="220.0" prefHeight="28.0" prefWidth="220.0" promptText="username [at least 4 chars]">
+         <VBox.margin>
+            <Insets bottom="5.0" left="40.0" right="40.0" top="5.0" />
+         </VBox.margin>
+      </TextField>
+      <PasswordField fx:id="passwordField" maxHeight="28.0" maxWidth="220.0" prefHeight="28.0" prefWidth="220.0" promptText="password [at least 6 chars]">
+         <VBox.margin>
+            <Insets bottom="5.0" left="40.0" right="40.0" top="5.0" />
+         </VBox.margin>
+      </PasswordField>
+      <JFXButton fx:id="continueButton" maxHeight="28.0" maxWidth="220.0" onAction="#continueButtonAction" prefHeight="28.0" prefWidth="220.0" style="-fx-background-color: #398ccc;" text="Continue" textAlignment="CENTER" textFill="WHITE">
+         <VBox.margin>
+            <Insets bottom="5.0" left="40.0" right="40.0" top="5.0" />
+         </VBox.margin>
+      </JFXButton>
+      <HBox prefHeight="30.0" prefWidth="300.0">
+         <children>
+            <Label fx:id="loginQuaLabel" maxWidth="130.0" prefHeight="18.0" prefWidth="125.0" text="Don't have an account?">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="60.0" top="2.0" />
+               </HBox.margin>
+            </Label>
+            <Hyperlink fx:id="registerHyperlink" onAction="#registerHyperlinkAction" text="Register" underline="true">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Hyperlink>
+         </children>
+      </HBox>
+   </VBox>
+   <JFXButton fx:id="closeButton" layoutX="575.0" layoutY="2.0" onAction="#closeButtonAction" text="x" />
+</AnchorPane>
